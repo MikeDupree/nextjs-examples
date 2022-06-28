@@ -1,0 +1,15 @@
+{
+  "nodeVersion": "system",
+  "coverage": true,
+  "component": {
+    "componentFolder": "src",
+    "testFiles": "**/*spec.{js,jsx,ts,tsx}",
+    "viewportWidth": 1200,
+    "viewportHeight": 1200,
+    "video": false,
+    "screenshotOnRunFailure": false
+  },
+  "e2e": {
+    "baseUrl": "http://localhost:3000"
+  }
+}

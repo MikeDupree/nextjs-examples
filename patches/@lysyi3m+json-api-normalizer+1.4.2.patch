@@ -1,0 +1,27 @@
+diff --git a/node_modules/@lysyi3m/json-api-normalizer/lib/index.js b/node_modules/@lysyi3m/json-api-normalizer/lib/index.js
+index ba379ea..88d03f6 100644
+--- a/node_modules/@lysyi3m/json-api-normalizer/lib/index.js
++++ b/node_modules/@lysyi3m/json-api-normalizer/lib/index.js
+@@ -39,13 +39,21 @@ function getRelationshipData(relationship, included) {
+   const {
+     attributes,
+     id,
++    type,
+     links,
+-    meta,
+     relationships
+   } = resource;
++
++  let { meta } = resource;
++
++  if(relationship.meta) {
++    meta = Object.assign(relationship.meta, meta);
++  }
++
+   const extractedRelationships = extractRelationships(relationships, included);
+   return Object.assign({}, {
+     id,
++    type,
+     links,
+     meta
+   }, attributes, extractedRelationships);

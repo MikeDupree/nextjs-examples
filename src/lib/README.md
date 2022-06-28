@@ -1,0 +1,1 @@
+`lib/` is to be used for any helper functions or api functions used within your application

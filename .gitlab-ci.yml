@@ -1,0 +1,31 @@
+variables:
+  CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cypress/cache/Cypress'
+
+# Include the Acro Standards templates.
+# Remove whichever are not needed and relevant jobs below.
+include:
+  - project: 'acro/code/standards'
+    ref: master
+    file:
+      - '/ci-templates/jobs/js-build.yml'
+      - '/ci-templates/jobs/js-lint.yml'
+      - '/ci-templates/jobs/js-test.yml'
+      - '/ci-templates/jobs/pages/pages.yml'
+
+stages:
+  - build
+  - test
+  - deploy
+
+js-build:
+  extends: .js-build
+
+js-lint:
+  extends: .js-lint
+
+js-test:
+  extends: .js-test
+
+pages:
+  extends: .pages
+  stage: deploy

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="1" errors="0" time="0.824">
+  <testsuite name="Test example function" errors="0" failures="1" skipped="0" timestamp="2022-06-28T22:39:22" time="0.34" tests="1">
+    <testcase classname="Test example function Should return this is an example." name="Test example function Should return this is an example." time="0.002">
+      <failure>TypeError: expect(...).equal is not a function
+    at Object.&lt;anonymous&gt; (/home/mdupree/dev/acro/teams/koodo/acro-nextjs-example/src/lib/example/example.spec.ts:9:22)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
